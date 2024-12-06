@@ -34,11 +34,10 @@ class OneDayWidget extends StatelessWidget {
           ),
         ),
         child: Container(
-          width: 120,
           margin: const EdgeInsets.all(4),
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: context.appTheme.primary),
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -50,6 +49,7 @@ class OneDayWidget extends StatelessWidget {
                     child: Image.network("https://openweathermap.org/img/wn/${element.weather![0].icon}@2x.png"),
                   ),
                 ),
+                CustomTextWidget("${context.localized.temp}: ${(element.main!.temp! - 272).round()} ℃", fontSize: 10),
                 CustomTextWidget("Description: ${element.weather![0].description}", fontSize: 10),
                 CustomTextWidget("${context.localized.windSpeed}: ${element.wind!.speed}", fontSize: 10),
                 CustomTextWidget("${context.localized.humidity}: ${element.main!.humidity}", fontSize: 10),
