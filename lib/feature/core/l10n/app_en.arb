@@ -1,0 +1,24 @@
+{
+  "@@locale": "en",
+
+  "helloWorld": "Hello World!",
+   "home": "Home",
+   "welcome": "Welcome Back",
+   "cityName": "Write City Name",
+   "search": "Search",
+   "profile": "Profile",
+   "favorite": "Favorite",
+   "switchTheme": "Switch Theme",
+   "country": "Country",
+   "city": "City",
+   "temp":"Temperature",
+   "weather": "Weather",
+   "lat":"Latitude",
+   "lon": "longitude",
+   "windSpeed": "Wind speed",
+   "humidity" : "Humidity",
+   "sunrise" : "Sunrise",
+   "sunset" : "Sunset",
+   "author":"Author"
+
+}

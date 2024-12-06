@@ -1,0 +1,26 @@
+{
+  "@@locale": "uz",
+
+
+   "helloWorld": "Salom Dunyo!",
+   "home": "Asosiy",
+   "welcome": "Hush kelibsiz",
+   "cityName": "Shahar nomini yozing",
+   "search": "Qidiruv",
+   "profile": "Profil",
+   "favorite": "Sevimlilar",
+   "switchTheme": "Mavzuni o'zgartirish",
+   "country": "Davlat",
+   "city": "Shahar",
+   "temp": "Harorat",
+   "weather": "Ob-havo",
+   "lat": "Kenglik",
+   "lon": "Uzunlik",
+   "windSpeed": "Shamol tezligi",
+   "humidity": "Namlik",
+   "sunrise": "Quyosh chiqishi",
+   "sunset": "Quyosh botishi",
+   "author": "Muallif"
+
+
+}
