@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:keyboard_dismisser/keyboard_dismisser.dart';
+import 'package:weather_wizard/application/favorite_bloc/favorite_bloc.dart';
 import 'package:weather_wizard/application/home_bloc/home_bloc.dart';
 import 'package:weather_wizard/domain/services/context_extension.dart';
 import 'package:weather_wizard/feature/core/route/app_route.dart';
@@ -17,6 +18,7 @@ class App extends StatelessWidget {
             BlocProvider(create: (_) => ThemeCubit()),
             BlocProvider(create: (_) => LocaleCubit()),
             BlocProvider(create: (_) => HomeBloc()),
+            BlocProvider(create: (_) => FavoriteBloc()),
           ],
           child: const App(),
         ),
