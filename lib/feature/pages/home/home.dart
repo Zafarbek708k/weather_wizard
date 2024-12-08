@@ -1,13 +1,14 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_wizard/domain/entity/my_weather_model.dart';
-import 'package:weather_wizard/domain/entity/weakly_weather_model.dart';
+import 'package:weather_wizard/domain/notwork_service/http_service.dart';
 import 'package:weather_wizard/domain/services/context_extension.dart';
+import 'package:weather_wizard/feature/pages/home/loaded_data_screen.dart';
 import 'package:weather_wizard/feature/widgets/custom_text_widget.dart';
 import 'package:weather_wizard/feature/widgets/custom_textfield.dart';
-import 'package:weather_wizard/feature/widgets/my_weather_full_widget.dart';
 import '../../../application/home_bloc/home_bloc.dart';
-import '../../widgets/one_day_card_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -16,14 +17,10 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class GeoCode {
-  String lat, lon;
-
-  GeoCode({required this.lat, required this.lon});
-}
 
 class _HomePageState extends State<HomePage> {
   TextEditingController searchCtrl = TextEditingController();
+
 
   @override
   void dispose() {
@@ -86,44 +83,5 @@ class _HomePageState extends State<HomePage> {
 }
 
 
-class DataScreen extends StatelessWidget {
-  const DataScreen({super.key, required this.model, required this.elements});
-  final MyWeatherModel model;
-  final List<ListElement> elements;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 18.0),
-          child: WeatherFullWidget(
-            model: model,
-            onPressed: () {},
-          ),
-        ),
-        SizedBox(
-          height: 150,
-          child: ListView(
-            scrollDirection: Axis.horizontal,
-            children: [
-              ...List.generate(
-                elements.length,
-                    (index) {
-                  final element = elements[index];
-                  return OneDayWidget(index: "${index + 1}", element: element);
-                },
-              )
-            ],
-          ),
-        ),
-        SizedBox(height: 10)
-      ],
-    );
-  }
-}
 
 

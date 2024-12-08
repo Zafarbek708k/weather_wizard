@@ -16,4 +16,22 @@ class MyWeatherModel {
     required this.temp,
     required this.sunrise,
   });
+
+  Map<String, dynamic> toJson() {
+    return {
+      "cityName": cityName,
+      "lat": lat,
+      "lon": lon,
+      "windSpeed": windSpeed,
+      "image": image,
+      "humidity": humidity,
+      "country": country,
+      "clouds": clouds,
+      "sunrise": sunrise,
+      "sunset": sunset,
+      "temp": temp,
+      "weatherId": weatherId,
+    };
+  }
+
 }
