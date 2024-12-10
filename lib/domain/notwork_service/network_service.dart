@@ -52,20 +52,20 @@ class NetworkService {
     return dio;
   }
 
-  static Future<Map<String, String>> getHeaders({bool isUpload = false}) async {
-    final headers = <String, String>{
-      "Content-type": isUpload ? "multipart/form-data" : "application/json; charset=UTF-8",
-      "Accept": isUpload ? "multipart/form-data" : "application/json; charset=UTF-8",
-    };
-
-    final token = await AppStorage.$read(key: StorageKey.accessToken) ?? "";
-
-    if (token.isNotEmpty) {
-      headers.putIfAbsent("Authorization", () => "Bearer $token");
-    }
-
-    return headers;
-  }
+  // static Future<Map<String, String>> getHeaders({bool isUpload = false}) async {
+  //   final headers = <String, String>{
+  //     "Content-type": isUpload ? "multipart/form-data" : "application/json; charset=UTF-8",
+  //     "Accept": isUpload ? "multipart/form-data" : "application/json; charset=UTF-8",
+  //   };
+  //
+  //   final token = await AppStorage.$read(key: StorageKey.accessToken) ?? "";
+  //
+  //   if (token.isNotEmpty) {
+  //     headers.putIfAbsent("Authorization", () => "Bearer $token");
+  //   }
+  //
+  //   return headers;
+  // }
 
 
   static Future<String?> get(String api, Map<String, String> params) async {

@@ -1,9 +1,5 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:weather_wizard/domain/entity/my_weather_model.dart';
-import 'package:weather_wizard/domain/notwork_service/http_service.dart';
 import 'package:weather_wizard/domain/services/context_extension.dart';
 import 'package:weather_wizard/feature/pages/home/loaded_data_screen.dart';
 import 'package:weather_wizard/feature/widgets/custom_text_widget.dart';
@@ -20,7 +16,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   TextEditingController searchCtrl = TextEditingController();
-
 
   @override
   void dispose() {

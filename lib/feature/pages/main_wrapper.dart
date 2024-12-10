@@ -71,10 +71,6 @@ class _MainWrapperState extends State<MainWrapper> {
     );
   }
 
-  void _onItemTapped(int index) {
-    widget.navigationShell.goBranch(
-      index,
-      initialLocation: index == widget.navigationShell.currentIndex,
-    );
-  }
+  void _onItemTapped(int i) => widget.navigationShell.goBranch(i, initialLocation: i == widget.navigationShell.currentIndex);
+
 }
